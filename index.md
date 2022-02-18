@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Development Containers
 
-You can use the [editor on GitHub](https://github.com/bamurtaugh/dev-container-spec/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Use a Docker container as a full-featured development environment.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### What are development containers?
 
-### Markdown
+Containers are pieces of software that package code and all of the dependencies that code needs to run, including the runtime, tools, libraries, and settings. Development containers (aka "dev containers") specifically let you code within this piece of software, providing a separate coding environment from your computer.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+A `devcontainer.json` file in your project tells your editor how to access (or create) a development container with a well-defined tool and runtime stack. This container can be used to run an application or to separate tools, libraries, or runtimes needed for working with a codebase.
 
-```markdown
-Syntax highlighted code block
+### Resources
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bamurtaugh/dev-container-spec/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Help shape the direction of dev containers and review materials in the [specification repository](https://github.com/microsoft/dev-container-spec).
