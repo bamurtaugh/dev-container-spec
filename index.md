@@ -29,8 +29,8 @@ A `devcontainer.json` file in your project tells your editor how to access (or c
 
 As containerizing production workloads becomes commonplace, more developers are using containers for scenarios beyond deployment including continuous integration, test automation, and even full-featured coding environments. 
 
-[Check out scenarios](/docs/spec-details.md){: .btn .fs-5 .mb-4 .mb-md-0 }
-[Check out the reference](/docs/json-reference.md){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Learn more](/docs/spec-details.md){: .btn .fs-5 .mb-4 .mb-md-0 } <br><br>
+[Check out devcontainer.json reference](/docs/json-reference.md){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
