@@ -1,1 +1,1 @@
-gem "just-the-docs"
+gem "pmarsceill/just-the-docs"
