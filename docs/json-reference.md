@@ -4,7 +4,7 @@ title: devcontainer.json reference
 nav_order: 3
 ---
 
-# Configuration
+# devcontainer.json reference
 
 A `devcontainer.json` file in your project tells [tools and services that support the dev container spec](supporting-tools.md) how to access (or create) a **development container** with a well-defined tool and runtime stack.
 
