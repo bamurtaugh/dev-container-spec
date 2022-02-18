@@ -10,7 +10,7 @@ A `devcontainer.json` file in your project tells tools and services that support
 
 This page outlines tools and services that currently support this format.
 
-While most [dev container properties](devcontainerjson-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools.
+While most [dev container properties](json-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools.
 
 ## devcontainer CLI
 
@@ -21,6 +21,7 @@ Given the growing number of use cases for dev containers, there is a companion [
 A [codespace](https://docs.github.com/en/codespaces/overview) is a development environment that's hosted in the cloud. Codespaces run on a variety of VM-based compute options hosted by GitHub.com, which you can configure from 2 core machines up to 32 core machines. You can connect to your codespaces from the browser or locally using Visual Studio Code.
 
 > **Tip:** If you've already built a container and connected to it, be sure to run **Codespaces: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up any changes you make.
+
 ### Product specific limitations
 
 Some properties may apply differently to Codespaces. Please note that Codespaces supports [VS Code properties](#visual-studio-code-remote---containers).
@@ -40,6 +41,7 @@ Some properties may apply differently to Codespaces. Please note that Codespaces
 The [**Visual Studio Code Remote - Containers** extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) lets you use a [Docker container](https://docker.com) as a full-featured development environment. It allows you to open any folder inside (or mounted into) a container and take advantage of Visual Studio Code's full feature set. There is more information in the Remote - Containers [documentation](https://code.visualstudio.com/docs/remote/containers).
 
 > **Tip:** If you've already built a container and connected to it, be sure to run **Remote-Containers: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up any changes you make.
+
 ### Product specific properties
 
 Some properties are specific to VS Code. Please note that Codespaces supports the VS Code properties.
