@@ -29,13 +29,20 @@ search:
   # Supports true or false (default)
   button: false
   
-heading_anchors: true
-  
 # Aux links for the upper right navigation
 aux_links:
   "Dev container spec on GitHub":
     - "//github.com/microsoft/dev-container-spec"
    
+# Makes Aux links open in a new tab. Default is false
+aux_links_new_tab: false
+
+# Heading anchor links appear on hover over h1-h6 tags in page content
+# allowing users to deep link to a particular heading on a page.
+#
+# Supports true (default) or false
+heading_anchors: true
+
 # Sort order for navigation links
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive # Capital letters sorted before lowercase
@@ -51,6 +58,31 @@ gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub"
 gh_edit_repository: "https://github.com/bamurtaugh/dev-container-spec/tree/gh-pages" # the github URL for your repo
 gh_edit_branch: "gh-pages" # the branch that your docs is served from
+gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
+
+# Color scheme supports "light" (default) and "dark"
+color_scheme: dark
+
+# Define Jekyll collections
+collections:
+  # Define a collection named "docs", its documents reside in the "_docs" directory
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+dev_container_spec:
+  # Define which collections are used
+  collections:
+    # Reference the "docs" collection
+    docs:
+      # Give the collection a name
+      name: Documentation
+      # Exclude the collection from the navigation
+      # Supports true or false (default)
+      nav_exclude: false
+      # Exclude the collection from the search
+      # Supports true or false (default)
+      search_exclude: false
 
 plugins:
   - jekyll-seo-tag
