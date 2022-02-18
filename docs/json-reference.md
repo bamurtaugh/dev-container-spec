@@ -1,7 +1,7 @@
 ---
 layout: default
 title: devcontainer.json reference
-nav_order: 2
+nav_order: 3
 ---
 
 # Configuration
