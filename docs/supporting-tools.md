@@ -6,11 +6,24 @@ nav_order: 4
 
 # Supporting tools and services
 
+{: .no_toc }
+
+
 A `devcontainer.json` file in your project tells tools and services that support the dev container spec how to access (or create) a **development container** with a well-defined tool and runtime stack. 
 
 This page outlines tools and services that currently support this format.
 
 While most [dev container properties](json-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools.
+{: .fs-6 .fw-300 }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
 
 ## devcontainer CLI
 

@@ -19,15 +19,13 @@ An open specification for enriching containers with development specific content
 ## Overview
 
 ### What are development containers?
-Containers are pieces of software that package code and all of the dependencies that code needs to run, including the runtime, tools, libraries, and settings. Development containers (aka "dev containers") specifically let you code within this piece of software, providing a separate coding environment from your computer.
-
-A `devcontainer.json` file in your project tells your editor how to access (or create) a development container with a well-defined tool and runtime stack. This container can be used to run an application or to separate tools, libraries, or runtimes needed for working with a codebase.
+A development container allows you to use a [Docker container](https://www.docker.com/) as a full-featured development environment. It can be used to run an application, to separate tools, libraries, or runtimes needed for working with a codebase, and to aid in continuous integration and testing.
 
 ---
 
 ## What is this specification?
 
-As containerizing production workloads becomes commonplace, more developers are using containers for scenarios beyond deployment including continuous integration, test automation, and even full-featured coding environments. 
+The Development Containers specification seeks to find ways to enrich existing formats with common development specific settings, tools, and configuration while still providing a simplified, un-orchestrated single container option – so that they can be used as coding environments or for continuous integration and testing.
 
 [Learn more](/docs/spec-details.md){: .btn .fs-5 .mb-4 .mb-md-0 } <br><br>
 [Check out devcontainer.json reference](/docs/json-reference.md){: .btn .fs-5 .mb-4 .mb-md-0 }
