@@ -28,7 +28,6 @@ A development container allows you to use a [Docker container](https://www.docke
 The Development Containers specification seeks to find ways to enrich existing formats with common development specific settings, tools, and configuration while still providing a simplified, un-orchestrated single container option – so that they can be used as coding environments or for continuous integration and testing.
 
 [Learn more](/docs/spec-details.md){: .btn .fs-5 .mb-4 .mb-md-0 } <br><br>
-[Check out devcontainer.json reference](/docs/json-reference.md){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -38,4 +37,4 @@ There are a [variety of tools and services](/docs/supporting-tools.md) that supp
 
 ## Contributing
 
-Help shape the direction of dev containers and review materials in the [specification repository](https://github.com/microsoft/dev-container-spec).
+You can help shape the direction of dev containers and review materials in the [specification repository](https://github.com/microsoft/dev-container-spec). There are more details about how to contribute in the [getting involved page](/docs/getting-involved.md).
