@@ -8,12 +8,9 @@ nav_order: 4
 {: .no_toc }
 
 
-A `devcontainer.json` file in your project tells tools and services that support the dev container spec how to access (or create) a **development container** with a well-defined tool and runtime stack. 
+This page outlines tools and services that currently support the development container specification, including the `devcontainer.json` format.
 
-This page outlines tools and services that currently support this format.
-
-While most [dev container properties](json-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools.
-{: .fs-6 .fw-300 }
+While most [dev container properties](json-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools, which are outlined below.
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -26,13 +23,13 @@ While most [dev container properties](json-reference.md) apply to any `devcontai
 
 ## devcontainer CLI
 
-Given the growing number of use cases for dev containers, there is a companion [devcontainer command line interface](https://code.visualstudio.com/docs/remote/devcontainer-cli) (CLI) that can be used independent of the Remote - Containers extension or GitHub Codespaces.
+Given the growing number of use cases for dev containers, there is a companion [devcontainer command line interface](https://code.visualstudio.com/docs/remote/devcontainer-cli) (CLI). It can be used independent of other tools.
 
 ## GitHub Codespaces
 
 A [codespace](https://docs.github.com/en/codespaces/overview) is a development environment that's hosted in the cloud. Codespaces run on a variety of VM-based compute options hosted by GitHub.com, which you can configure from 2 core machines up to 32 core machines. You can connect to your codespaces from the browser or locally using Visual Studio Code.
 
-> **Tip:** If you've already built a container and connected to it, be sure to run **Codespaces: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up any changes you make.
+> **Tip:** If you've already built a codespace and connected to it, be sure to run **Codespaces: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up any changes you make.
 
 ### Product specific limitations
 
