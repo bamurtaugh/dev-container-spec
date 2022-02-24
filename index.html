@@ -71,23 +71,25 @@ layout: default
             <h1 class="text-center"><i class="fa fa-cogs" aria-hidden="true"></i></h1>
             <a href='{{ "/overview" | prepend: site.baseurl }}'><h3 class="text-center">Overview</h3></a>
             <p>
-                As containerizing production workloads becomes commonplace, more developers are using containers for scenarios beyond deployment including continuous integration, test automation, and even full-featured coding environments.
+                Learn more about the open dev container standard.
             </p>
         </div>
         <div class="col-lg-4">
             <h1 class="text-center"><i class="fas fa-book" aria-hidden="true"></i></h1>
-            <a href='{{ "/specification" | prepend: site.baseurl }}'><h3 class="text-center">Specification</h3></a>
+            <!--<a href='{{ "/specification" | prepend: site.baseurl }}'><h3 class="text-center">Specification</h3></a>-->
+            <a href="https://github.com/microsoft/dev-container-spec/issues/9"><h3 class="text-center">Specification</h3></a>
             <p>
-                The latest version of the specification.
+                Check out the latest details of the specification.
             </p>
-            <p>
+            <!--<p>
                 <a href='{{ "/changelog" | prepend: site.baseurl }}'>Change History</a>
-            </p>
+            </p>-->
         </div>
         <div class="col-lg-4">
             <h1 class="text-center"><i class="fas fa-code-branch" aria-hidden="true"></i></h1>
-            {% assign sorted = site.implementors | sort: 'index' %}
-            <a href = "{{ sorted.first.url | prepend: site.baseurl }}"><h3 class="text-center">Implementations</h3></a>
+            <!--{% assign sorted = site.implementors | sort: 'index' %}
+            <a href = "{{ sorted.first.url | prepend: site.baseurl }}"><h3 class="text-center">Implementations</h3></a>-->
+            <a href = '{{ "/supporting" | prepend: site.baseurl }}'><h3 class="text-center">Supporting Tools</h3></a>
             <p>
                 There are a variety of tools and services that support this standard.
             </p>
