@@ -4,12 +4,6 @@ layout: singlePage
 sectionid: supporting
 ---
 
----
-layout: default
-title: Supporting tools
-nav_order: 4
----
-
 # Supporting tools and services
 This page outlines tools and services that currently support the development container specification, including the `devcontainer.json` format.
 
