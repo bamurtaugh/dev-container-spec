@@ -1,10 +1,9 @@
 ---
-title: Supporting Tools
+title: Supporting tools and services
 layout: singlePage
 sectionid: supporting
 ---
 
-# Supporting tools and services
 This page outlines tools and services that currently support the development container specification, including the `devcontainer.json` format.
 
 While most [dev container properties](json-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools, which are outlined below.
