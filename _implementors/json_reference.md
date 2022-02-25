@@ -6,8 +6,6 @@ author: Microsoft
 index: 3
 ---
 
-# devcontainer.json reference
-
 A `devcontainer.json` file in your project tells [tools and services that support the dev container spec](/supporting.md) how to access (or create) a **development container** with a well-defined tool and runtime stack.
 
 ## Scenario specific properties
