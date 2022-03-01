@@ -24,8 +24,8 @@ A [codespace](https://docs.github.com/en/codespaces/overview) is a development e
 
 Some properties may apply differently to Codespaces. Please note that Codespaces supports [VS Code properties](#visual-studio-code-remote---containers).
 
-| Property or variable | Type | Description |
-|----------|---------|----------------------|
+| Property or variable | Type  | Description |
+|:------------------|:------------|:------------|
 | `mounts` | array | Codespaces ignores "bind" mounts with the exception of the Docker socket. Volume mounts are still allowed.|
 | `workspaceMount` | string | Not yet supported in Codespaces. |
 | `workspaceFolder` | string | Not yet supported in Codespaces. |
@@ -33,6 +33,7 @@ Some properties may apply differently to Codespaces. Please note that Codespaces
 | `portsAttributes` | object | Codespaces does not yet support the `"host:port"` variation of this property.|
 | `shutdownAction` | enum | Does not apply to Codespaces. |
 | `${localEnv:VARIABLE_NAME}` | Any | For Codespaces, the host is in the cloud rather than your local machine.|
+{: .table .table-bordered .table-responsive}
 
 ## Visual Studio Code Remote - Containers
 
@@ -44,21 +45,27 @@ The [**Visual Studio Code Remote - Containers** extension](https://marketplace.v
 
 Some properties are specific to VS Code. Please note that Codespaces supports the VS Code properties.
 
-| Property | Type | Description |
-|----------|------|-------------|
+| Property | Type  | Description |
+|:------------------|:------------|:------------|
 | `extensions` | array | An array of extension IDs that specify the extensions that should be installed inside the container when it is created. Defaults to `[]`. |
 | `settings` | object | Adds default `settings.json` values into a container/machine specific settings file. Defaults to `{}`. |
+{: .table .table-bordered .table-responsive}
 
 ### Product specific limitations
 
 Some properties may also have certain limitations in the Remote - Containers extension.
 
-| Property or variable | Type | Description |
-|----------|------|-------------|
+| Property or variable | Type  | Description |
+|:------------------|:------------|:------------|
 | `workspaceMount` | string | Not yet supported when using Clone Repository in Container Volume. |
 | `workspaceFolder` | string | Not yet supported when using Clone Repository in Container Volume. |
 | `${localWorkspaceFolder}`  | Any | Not yet supported when using Clone Repository in Container Volume. |
 | `${localWorkspaceFolderBasename}` | Any | Not yet supported when using Clone Repository in Container Volume. |
+{: .table .table-bordered .table-responsive}
+
+## Remote - Containers CLI
+
+There is a Remote - Containers [`devcontainer` CLI](https://code.visualstudio.com/docs/remote/devcontainer-cli) which may be installed within Remote - Containers or through the command line.
 
 ## Schema
 
