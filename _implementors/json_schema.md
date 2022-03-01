@@ -9,6 +9,7 @@ index: 2
 You may review the [current devcontainer.json schema](https://github.com/microsoft/vscode/blob/main/extensions/configuration-editing/schemas/devContainer.schema.src.json), and the accompanying [dev-container-spec issue](https://github.com/microsoft/dev-container-spec/issues/14).
 
 ```
+{
 "$schema": "http://json-schema.org/draft-07/schema#",
 "description": "Defines a dev container",
 "allowComments": true,
@@ -605,4 +606,5 @@ You may review the [current devcontainer.json schema](https://github.com/microso
 		"additionalProperties": false
 	}
 ]
+}
 ```
