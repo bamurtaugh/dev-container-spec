@@ -1,19 +1,19 @@
 ---
 layout: implementors
-title:  "How to Contribute to the Dev Container Specification"
+title:  "How to contribute to the Development Container Specification"
 shortTitle: "Contributing"
 author: Microsoft
 index: 4
 ---
 
-We're excited for your contributions to the dev container specification! This document outlines how you can get involved. 
+We're excited for your contributions to the Dev Container Specification! This document outlines how you can get involved. 
 
 ## Contribution approaches
 
 - Propose the change via an [issue](https://github.com/microsoft/dev-container-spec/issues) in the [dev-container-spec repo](https://github.com/microsoft/dev-container-spec). Try to get early feedback before spending too much effort formalizing it.
 - More formally document the proposed change in terms of properties and their semantics. Look to format your proposal like our [devcontainer.json reference](/_implementors/json_reference.md).
 
-Here is a sample:
+Here is a sample proposal:
 
 | Property | Type  | Description |
 |:------------------|:------------|:------------|
@@ -26,7 +26,7 @@ Once there is discussion on your proposal, please also open and link a PR to upd
 
 ## Review process
 
-We use the following [labels](https://github.com/microsoft/dev-container-spec/labels):
+We use the following [labels](https://github.com/microsoft/dev-container-spec/labels) in the dev-container-spec repo:
 
 - `proposal`: Issues under discussion, still collecting feedback.
 - `finalization`: Proposals we intend to make part of the spec.
