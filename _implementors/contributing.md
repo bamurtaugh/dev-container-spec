@@ -15,8 +15,8 @@ We're excited for your contributions to the dev container specification! This do
 
 Here is a sample:
 
-| Property | Type | Description |
-|----------|------|-------------|
+| Property | Type  | Description |
+|:------------------|:------------|:------------|
 | `image` | string | **Required** when [using an image](/docs/remote/create-dev-container.md#using-an-image-or-dockerfile). The name of an image in a container registry ([DockerHub](https://hub.docker.com), [GitHub Container Registry](https://docs.github.com/packages/guides/about-github-container-registry), [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)) that VS Code and other `devcontainer.json` supporting services / tools should use to create the dev container. |
 
 - PRs to the [schema](https://github.com/microsoft/vscode/blob/main/extensions/configuration-editing/schemas/devContainer.schema.src.json), i.e code or shell scripts demonstrating approaches for implementation.
