@@ -39,8 +39,8 @@ Docker has the concept of "publishing" ports when the container is created. Publ
 
 | Property | Type  | Description |
 |:------------------|:------------|:------------|
-| `dockerComposeFile` | string,<br>array | **Required** when [using Docker Compose](https://code.visualstudio.com/docs/remote/create-dev-container#_use-a-dockerfile). Path or an ordered list of paths to Docker Compose files relative to the `devcontainer.json` file. Using an array is useful [when extending your Docker Compose configuration](https://code.visualstudio.com/docs/remote/create-dev-container#_extend-your-docker-compose-file-for-development). The order of the array matters since the contents of later files can override values set in previous ones.<br>The default `.env` file is picked up from the root of the project, but you can use `env_file` in your Docker Compose file to specify an alternate location.<br>Note that the array syntax will execute the command without a shell. You can [learn more](#formatting-string-vs-array-properties) about formatting string vs array properties. |
-| `service` | string | **Required** when [using Docker Compose](https://code.visualstudio.com/docs/remote/create-dev-container#_use-a-dockerfile). The name of the service `devcontainer.json` supporting services / tools should connect to once running.  |
+| `dockerComposeFile` | string,<br>array | **Required** when using Docker Compose. Path or an ordered list of paths to Docker Compose files relative to the `devcontainer.json` file. Using an array is useful [when extending your Docker Compose configuration](https://code.visualstudio.com/docs/remote/create-dev-container#_extend-your-docker-compose-file-for-development). The order of the array matters since the contents of later files can override values set in previous ones.<br>The default `.env` file is picked up from the root of the project, but you can use `env_file` in your Docker Compose file to specify an alternate location.<br>Note that the array syntax will execute the command without a shell. You can [learn more](#formatting-string-vs-array-properties) about formatting string vs array properties. |
+| `service` | string | **Required** when using Docker Compose. The name of the service `devcontainer.json` supporting services / tools should connect to once running.  |
 | `runServices` | array | An array of services in your Docker Compose configuration that should be started by `devcontainer.json` supporting services / tools. These will also be stopped when you disconnect unless `"shutdownAction"` is `"none"`. Defaults to all services. |
 | `workspaceFolder` | string | Sets the default path that `devcontainer.json` supporting services / tools should open when connecting to the container (which is often the path to a volume mount where the source code can be found in the container). Defaults to `"/"`. |
 {: .table .table-bordered .table-responsive}
@@ -96,7 +96,7 @@ While `devcontainer.json` does not focus on hardware or VM provisioning, it can 
 | `hostRequirements.storage` | string | A string indicating minimum storage requirements with a `tb`, `gb`, `mb`, or `kb` suffix. For example, `"hostRequirements": {"storage": "32gb"}` |
 {: .table .table-bordered .table-responsive}
 
-## <a href="#ports-attributes" name="ports-attributes" class="anchor"> Port attributes </a>
+## <a href="#port-attributes" name="port-attributes" class="anchor"> Port attributes </a>
 
 The `portsAttributes` and `otherPortsAttributes` properties allow you to map default port options for one or more manually or automatically forwarded ports. The following is a list of options that can be set in the configuration object assigned to the property.
 
