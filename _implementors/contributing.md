@@ -8,7 +8,7 @@ index: 4
 
 We're excited for your contributions to the Dev Container Specification! This document outlines how you can get involved. 
 
-## Contribution approaches
+## <a href="#contribution-approaches" name="contribution-approaches" class="anchor"> Contribution approaches </a>
 
 - Propose the change via an [issue](https://github.com/microsoft/dev-container-spec/issues) in the [dev-container-spec repo](https://github.com/microsoft/dev-container-spec). Try to get early feedback before spending too much effort formalizing it.
 - More formally document the proposed change in terms of properties and their semantics. Look to format your proposal like our [devcontainer.json reference](/_implementors/json_reference.md).
@@ -24,7 +24,7 @@ Here is a sample proposal:
 
 Once there is discussion on your proposal, please also open and link a PR to update the [devcontainer.json reference doc](https://aka.ms/devcontainer.json). When your proposal is merged, the docs will be kept up-to-date with the latest spec.
 
-## Review process
+## <a href="#review-process" name="review-process" class="anchor"> Review process </a>
 
 We use the following [labels](https://github.com/microsoft/dev-container-spec/labels) in the dev-container-spec repo:
 

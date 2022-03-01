@@ -8,11 +8,11 @@ index: 3
 
 A `devcontainer.json` file in your project tells [tools and services that support the dev container spec](/supporting.md) how to access (or create) a **development container** with a well-defined tool and runtime stack.
 
-## Scenario specific properties
+## <a href="#scenario-specific" name="scenario-specific" class="anchor"> Scenario specific properties </a>
 
 The focus of `devcontainer.json` is to describe how to enrich a container for the purposes of development rather than acting as a multi-container orchestrator format. Instead, container orchestrator formats can be referenced when needed to manage multiple containers and their lifecycles. Today, `devcontainer.json` includes scenario specific properties for working without a container orchestrator (by directly referencing an image or Dockerfile) and for using Docker Compose as a simple multi-container orchestrator.
 
-### Image or Dockerfile specific properties
+### <a href="#image-specific" name="image-specific" class="anchor"> Image or Dockerfile specific properties </a>
 
 | Property | Type  | Description |
 |:------------------|:------------|:------------|
@@ -31,11 +31,11 @@ The focus of `devcontainer.json` is to describe how to enrich a container for th
 | `runArgs` | array | An array of [Docker CLI arguments](https://docs.docker.com/engine/reference/commandline/run/) that should be used when running the container. Defaults to `[]`. For example, this allows ptrace based debuggers like C++ to work in the container:<br /> `"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ]` . |
 {: .table .table-bordered .table-responsive}
 
-#### Publishing vs forwarding ports
+#### <a href="#publishing-vs-forwarding-ports" name="publishing-vs-forwarding-ports" class="anchor"> Publishing vs forwarding ports </a>
 
 Docker has the concept of "publishing" ports when the container is created. Published ports behave very much like ports you make available to your local network. If your application only accepts calls from `localhost`, it will reject connections from published ports just as your local machine would for network calls. Forwarded ports, on the other hand, actually look like `localhost` to the application.
 
-### Docker Compose specific properties
+### <a href="#compose-specific" name="compose-specific" class="anchor"> Docker Compose specific properties </a>
 
 | Property | Type  | Description |
 |:------------------|:------------|:------------|
@@ -45,7 +45,7 @@ Docker has the concept of "publishing" ports when the container is created. Publ
 | `workspaceFolder` | string | Sets the default path that `devcontainer.json` supporting services / tools should open when connecting to the container (which is often the path to a volume mount where the source code can be found in the container). Defaults to `"/"`. |
 {: .table .table-bordered .table-responsive}
 
-## General devcontainer.json properties
+## <a href="#general-properties" name="general-properties" class="anchor"> General devcontainer.json properties </a>
 
 | Property | Type  | Description |
 |:------------------|:------------|:------------|
@@ -62,11 +62,11 @@ Docker has the concept of "publishing" ports when the container is created. Publ
 | `shutdownAction` | enum | Indicates whether `devcontainer.json` supporting tools should stop the containers when the related tool window is closed / shut down.<br>Values are  `none`, `stopContainer` (default for image or Dockerfile), and `stopCompose` (default for Docker Compose). |
 {: .table .table-bordered .table-responsive}
 
-## Tool-specific properties
+## <a href="#tool-specific" name="tool-specific" class="anchor"> Tool-specific properties </a>
 
 While most properties apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools. You may explore this in the [supporting tools and services document](/supporting.md).
 
-## Lifecycle scripts
+## <a href="#lifecycle-scripts" name="lifecycle-scripts" class="anchor"> Lifecycle scripts </a>
 
 When creating or working with a dev container, you may need different commands to be run at different points in the container's lifecycle. The table below lists a set of command properties you can use to update what the container's contents in the order in which they are run (for example, `onCreateCommand` will run after `initializeCommand`). Each command property is an string or list of command arguments that should execute from the `workspaceFolder`.
 
@@ -85,7 +85,7 @@ For each command property, if the value is a single string, it will be run in `/
 
 If one of the lifecycle scripts fails, any subsequent scripts will not be executed. For instance, if `postCreateCommand` fails, `postStartCommand` and any following scripts will be skipped.
 
-## Minimum host requirements
+## <a href="#min-host-reqs" name="min-host-reqs" class="anchor"> Minimum host requirements </a>
 
 While `devcontainer.json` does not focus on hardware or VM provisioning, it can be useful to know your container's minimum RAM, CPU, and storage requirements. This is what the `hostRequirements` properties allow you to do. Cloud services can use these properties to automatically default to the best compute option available, while in other cases, you will be presented with a warning if the requirements are not met.
 
@@ -96,7 +96,7 @@ While `devcontainer.json` does not focus on hardware or VM provisioning, it can 
 | `hostRequirements.storage` | string | A string indicating minimum storage requirements with a `tb`, `gb`, `mb`, or `kb` suffix. For example, `"hostRequirements": {"storage": "32gb"}` |
 {: .table .table-bordered .table-responsive}
 
-## Port attributes
+## <a href="#ports-attributes" name="ports-attributes" class="anchor"> Port attributes </a>
 
 The `portsAttributes` and `otherPortsAttributes` properties allow you to map default port options for one or more manually or automatically forwarded ports. The following is a list of options that can be set in the configuration object assigned to the property.
 
@@ -109,7 +109,7 @@ The `portsAttributes` and `otherPortsAttributes` properties allow you to map def
 | `elevateIfNeeded` | boolean | Forwarding low ports like 22, 80, or 443 to `localhost` on the same port from `devcontainer.json` supporting services / tools may require elevated permissions on certain operating systems. Setting this property to `true` will automatically try to elevate the `devcontainer.json` supporting tool's permissions in this situation. Defaults to `false`. |
 {: .table .table-bordered .table-responsive}
 
-## Formatting string vs. array properties
+## <a href="#formatting-string-vs-array-properties" name="formatting-string-vs-array-properties" class="anchor"> Formatting string vs. array properties </a>
 
 The format of certain properties will vary depending on the involvement of a shell.
 
@@ -139,7 +139,7 @@ By contrast, the array format will keep the single quotes and write them to stan
 "postAttachCommand": ["echo", "foo='bar'"]
 ```
 
-## Variables in devcontainer.json
+## <a href="#variables-in-devcontainer" name="variables-in-devcontainer" class="anchor"> Variables in devcontainer.json </a>
 
 Variables can be referenced in certain string values in `devcontainer.json` in the following format: **${variableName}**. The following is a list of available variables you can use.
 
