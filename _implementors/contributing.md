@@ -11,7 +11,7 @@ We're excited for your contributions to the Dev Container Specification! This do
 ## <a href="#contribution-approaches" name="contribution-approaches" class="anchor"> Contribution approaches </a>
 
 - Propose the change via an [issue](https://github.com/microsoft/dev-container-spec/issues) in the [dev-container-spec repo](https://github.com/microsoft/dev-container-spec). Try to get early feedback before spending too much effort formalizing it.
-- More formally document the proposed change in terms of properties and their semantics. Look to format your proposal like our [devcontainer.json reference](/_implementors/json_reference.md).
+- More formally document the proposed change in terms of properties and their semantics. Look to format your proposal like our [devcontainer.json reference](/_implementors/json_reference).
 
 Here is a sample proposal:
 
