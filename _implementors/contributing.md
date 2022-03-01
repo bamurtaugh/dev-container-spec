@@ -19,6 +19,17 @@ Here is a sample:
 |:------------------|:------------|:------------|
 | `image` | string | **Required** when [using an image](/docs/remote/create-dev-container.md#using-an-image-or-dockerfile). The name of an image in a container registry ([DockerHub](https://hub.docker.com), [GitHub Container Registry](https://docs.github.com/packages/guides/about-github-container-registry), [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)) that VS Code and other `devcontainer.json` supporting services / tools should use to create the dev container. |
 
+| Header Field Name | Value Type  | Description |
+|:------------------|:------------|:------------|
+| Content-Length    | number      | The length of the content part in bytes. This header is required. |
+| Content-Type      | string      | The mime type of the content part. Defaults to application/vscode-jsonrpc; charset=utf-8 |
+{: .table .table-bordered .table-responsive}
+
+Language | Identifier
+-------- | ----------
+ABAP | `abap`
+Windows Bat | `bat`
+
 - PRs to the [schema](https://github.com/microsoft/vscode/blob/main/extensions/configuration-editing/schemas/devContainer.schema.src.json), i.e code or shell scripts demonstrating approaches for implementation.
 
 Once there is discussion on your proposal, please also open and link a PR to update the [devcontainer.json reference doc](https://aka.ms/devcontainer.json). When your proposal is merged, the docs will be kept up-to-date with the latest spec.
