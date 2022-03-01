@@ -29,6 +29,7 @@ The focus of `devcontainer.json` is to describe how to enrich a container for th
 | `workspaceMount` | string | Requires `workspaceFolder` be set as well. Overrides the default local mount point for the workspace when the container is created. Supports the same values as the [Docker CLI `--mount` flag](https://docs.docker.com/engine/reference/commandline/run/#add-bind-mounts-or-volumes-using-the---mount-flag). Environment and [pre-defined variables](#variables-in-devcontainerjson) may be referenced in the value. For example: <br />`"workspaceMount": "source=${localWorkspaceFolder}/sub-folder,target=/workspace,type=bind,consistency=cached", "workspaceFolder": "/workspace"` |
 | `workspaceFolder` | string | Requires `workspaceMount` be set. Sets the default path that `devcontainer.json` supporting services / tools should open when connecting to the container. Defaults to the automatic source code mount location. |
 | `runArgs` | array | An array of [Docker CLI arguments](https://docs.docker.com/engine/reference/commandline/run/) that should be used when running the container. Defaults to `[]`. For example, this allows ptrace based debuggers like C++ to work in the container:<br /> `"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ]` . |
+{: .table .table-bordered .table-responsive}
 
 #### Publishing vs forwarding ports
 
@@ -36,17 +37,18 @@ Docker has the concept of "publishing" ports when the container is created. Publ
 
 ### Docker Compose specific properties
 
-| Property | Type | Description |
-|----------|------|-------------|
+| Property | Type  | Description |
+|:------------------|:------------|:------------|
 | `dockerComposeFile` | string,<br>array | **Required** when [using Docker Compose](https://code.visualstudio.com/docs/remote/create-dev-container#_use-a-dockerfile). Path or an ordered list of paths to Docker Compose files relative to the `devcontainer.json` file. Using an array is useful [when extending your Docker Compose configuration](https://code.visualstudio.com/docs/remote/create-dev-container#_extend-your-docker-compose-file-for-development). The order of the array matters since the contents of later files can override values set in previous ones.<br>The default `.env` file is picked up from the root of the project, but you can use `env_file` in your Docker Compose file to specify an alternate location.<br>Note that the array syntax will execute the command without a shell. You can [learn more](#formatting-string-vs-array-properties) about formatting string vs array properties. |
 | `service` | string | **Required** when [using Docker Compose](https://code.visualstudio.com/docs/remote/create-dev-container#_use-a-dockerfile). The name of the service `devcontainer.json` supporting services / tools should connect to once running.  |
 | `runServices` | array | An array of services in your Docker Compose configuration that should be started by `devcontainer.json` supporting services / tools. These will also be stopped when you disconnect unless `"shutdownAction"` is `"none"`. Defaults to all services. |
 | `workspaceFolder` | string | Sets the default path that `devcontainer.json` supporting services / tools should open when connecting to the container (which is often the path to a volume mount where the source code can be found in the container). Defaults to `"/"`. |
+{: .table .table-bordered .table-responsive}
 
 ## General devcontainer.json properties
 
-| Property | Type | Description |
-|----------|------|-------------|
+| Property | Type  | Description |
+|:------------------|:------------|:------------|
 | `name` | string | A name for the dev container displayed in the UI. |
 | `forwardPorts` | array | An array of port numbers or `"host:port"` values  (e.g. `[3000, "db:5432"]`) that should always be forwarded from inside the primary container to the local machine (including on the web). The property is most useful for forwarding ports that cannot be auto-forwarded because the related process that starts before the `devcontainer.json` supporting service / tool connects or for forwarding a service not in the primary container in Docker Compose scenarios (e.g. `"db:5432"`). Defaults to `[]`. |
 | `portsAttributes` | object | Object that maps a port number, `"host:port"` value, range, or regular expression to a set of default options. See [port attributes](#port-attributes) for available options. For example: <br />`"portsAttributes": {"3000": {"label": "Application port"}}` |
@@ -58,6 +60,7 @@ Docker has the concept of "publishing" ports when the container is created. Publ
 | `overrideCommand` | boolean | Tells `devcontainer.json` supporting services / tools whether they should run `/bin/sh -c "while sleep 1000; do :; done"` when starting the container instead of the container's default command (since the container can shut down if the default command fails). Set to `false` if the default command must run for the container to function properly. Defaults to `true` for when using an image Dockerfile and `false` when referencing a Docker Compose file. |
 | `features` (currently in preview) | object | An object of dev container features and related options to be added into your primary container. The specific options  that are available varies by feature, so see its documentation for additional details. For example: <br />`"features": {"github-cli": "latest"}` <br /><br /> ⚠️ Currently in preview. |
 | `shutdownAction` | enum | Indicates whether `devcontainer.json` supporting tools should stop the containers when the related tool window is closed / shut down.<br>Values are  `none`, `stopContainer` (default for image or Dockerfile), and `stopCompose` (default for Docker Compose). |
+{: .table .table-bordered .table-responsive}
 
 ## Tool-specific properties
 
@@ -76,6 +79,7 @@ When creating or working with a dev container, you may need different commands t
 | `postStartCommand` | string,<br>array | A command to run each time the container is successfully started.<br>Note that the array syntax will execute the command without a shell. You can [learn more](#formatting-string-vs-array-properties) about formatting string vs array properties. |
 | `postAttachCommand` | string,<br>array | A command to run each time a tool has successfully attached to the container.<br>Note that the array syntax will execute the command without a shell. You can [learn more](#formatting-string-vs-array-properties) about formatting string vs array properties. |
 | `waitFor` | enum | An enum that specifies the command any tool should wait for before connecting. Defaults to `updateContentCommand`. This allows you to use `onCreateCommand` or `updateContentCommand` for steps that must happen before `devcontainer.json` supporting tools connect while still using `postCreateCommand` for steps that can happen behind the scenes afterwards. |
+{: .table .table-bordered .table-responsive}
 
 For each command property, if the value is a single string, it will be run in `/bin/sh`. Use `&&` in a string to execute multiple commands. For example, `"yarn install"` or `"apt-get update && apt-get install -y curl"`. The array syntax `["yarn", "install"]` will invoke the command (in this case `yarn`) directly without using a shell. Each fires after your source code has been mounted, so you can also run shell scripts from your source tree. For example: `bash scripts/install-dev-tools.sh`
 
@@ -90,6 +94,7 @@ While `devcontainer.json` does not focus on hardware or VM provisioning, it can 
 | `hostRequirements.cpus` | integer | Indicates the minimum required number of CPUs / virtual CPUs / cores. For example: `"hostRequirements": {"cpus": 2}` |
 | `hostRequirements.memory` | string |  A string indicating minimum memory requirements with a `tb`, `gb`, `mb`, or `kb` suffix. For example, `"hostRequirements": {"memory": "4gb"}` |
 | `hostRequirements.storage` | string | A string indicating minimum storage requirements with a `tb`, `gb`, `mb`, or `kb` suffix. For example, `"hostRequirements": {"storage": "32gb"}` |
+{: .table .table-bordered .table-responsive}
 
 ## Port attributes
 
@@ -102,6 +107,7 @@ The `portsAttributes` and `otherPortsAttributes` properties allow you to map def
 | `onAutoForward` | enum | Controls what should happen when a port is auto-forwarded once you've connected to the container. `notify` is the default, and a notification will appear when the port is auto-forwarded. If set to `openBrowser`, the port will be opened in the system's default browser. `openPreview` will open the URL in `devcontainer.json` supporting services' / tools' embedded preview browser. A value of `silent` will forward the port, but take no further action. A value of `ignore` means that this port should not be auto-forwarded at all. |
 | `requireLocalPort` | boolean | Dictates when port forwarding is required to map the port in the container to the same port locally or not. If set to `false`, the `devcontainer.json` supporting services /  tools will attempt to use the specified port forward to `localhost`, and silently map to a different one if it is unavailable. If set to `true`, you will be notified if it is not possible to use the same port. Defaults to `false`. |
 | `elevateIfNeeded` | boolean | Forwarding low ports like 22, 80, or 443 to `localhost` on the same port from `devcontainer.json` supporting services / tools may require elevated permissions on certain operating systems. Setting this property to `true` will automatically try to elevate the `devcontainer.json` supporting tool's permissions in this situation. Defaults to `false`. |
+{: .table .table-bordered .table-responsive}
 
 ## Formatting string vs. array properties
 
@@ -145,3 +151,4 @@ Variables can be referenced in certain string values in `devcontainer.json` in t
 | `${containerWorkspaceFolder}` | Any | The path that the workspaces files can be found in the container. |
 | `${localWorkspaceFolderBasename}` | Any | Name of the local folder that was opened in the `devcontainer.json` supporting service / tool (that contains `.devcontainer/devcontainer.json`). |
 | `${containerWorkspaceFolderBasename}` | Any | Name of the folder where the workspace files can be found in the container. |
+{: .table .table-bordered .table-responsive}
