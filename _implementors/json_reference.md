@@ -31,10 +31,6 @@ The focus of `devcontainer.json` is to describe how to enrich a container for th
 | `runArgs` | array | An array of [Docker CLI arguments](https://docs.docker.com/engine/reference/commandline/run/) that should be used when running the container. Defaults to `[]`. For example, this allows ptrace based debuggers like C++ to work in the container:<br /> `"runArgs": [ "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ]` . |
 {: .table .table-bordered .table-responsive}
 
-#### <a href="#publishing-vs-forwarding-ports" name="publishing-vs-forwarding-ports" class="anchor"> Publishing vs forwarding ports </a>
-
-Docker has the concept of "publishing" ports when the container is created. Published ports behave very much like ports you make available to your local network. If your application only accepts calls from `localhost`, it will reject connections from published ports just as your local machine would for network calls. Forwarded ports, on the other hand, actually look like `localhost` to the application.
-
 ### <a href="#compose-specific" name="compose-specific" class="anchor"> Docker Compose specific properties </a>
 
 | Property | Type  | Description |
@@ -108,6 +104,10 @@ The `portsAttributes` and `otherPortsAttributes` properties allow you to map def
 | `requireLocalPort` | boolean | Dictates when port forwarding is required to map the port in the container to the same port locally or not. If set to `false`, the `devcontainer.json` supporting services /  tools will attempt to use the specified port forward to `localhost`, and silently map to a different one if it is unavailable. If set to `true`, you will be notified if it is not possible to use the same port. Defaults to `false`. |
 | `elevateIfNeeded` | boolean | Forwarding low ports like 22, 80, or 443 to `localhost` on the same port from `devcontainer.json` supporting services / tools may require elevated permissions on certain operating systems. Setting this property to `true` will automatically try to elevate the `devcontainer.json` supporting tool's permissions in this situation. Defaults to `false`. |
 {: .table .table-bordered .table-responsive}
+
+## <a href="#publishing-vs-forwarding-ports" name="publishing-vs-forwarding-ports" class="anchor"> Publishing vs forwarding ports </a>
+
+Docker has the concept of "publishing" ports when the container is created. Published ports behave very much like ports you make available to your local network. If your application only accepts calls from `localhost`, it will reject connections from published ports just as your local machine would for network calls. Forwarded ports, on the other hand, actually look like `localhost` to the application.
 
 ## <a href="#formatting-string-vs-array-properties" name="formatting-string-vs-array-properties" class="anchor"> Formatting string vs. array properties </a>
 

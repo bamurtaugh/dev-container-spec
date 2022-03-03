@@ -22,7 +22,7 @@ A [codespace](https://docs.github.com/en/codespaces/overview) is a development e
 
 #### <a href="#codespaces-specific-limitations" name="codespaces-specific-limitations" class="anchor"> Codespaces specific limitations </a>
 
-Some properties may apply differently to Codespaces. Please note that Codespaces supports [VS Code specific properties](#visual-studio-code-specific-properties).
+Some properties may apply differently to Codespaces. Please note that Codespaces, both through the Codespaces web editor and VS Code client, and supports [VS Code properties](#visual-studio-code-remote---containers).
 
 | Property or variable | Type  | Description |
 |:------------------|:------------|:------------|
