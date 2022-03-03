@@ -20,9 +20,10 @@ A [codespace](https://docs.github.com/en/codespaces/overview) is a development e
 
 > **Tip:** If you make a change to your dev container after having built and connected to your codespace, be sure to run **Codespaces: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up any changes you make.
 
-#### <a href="#codespaces-specific-limitations" name="codespaces-specific-limitations" class="anchor"> Codespaces specific limitations </a>
+### <a href="#codespaces-specific-properties" name="codespaces-specific-properties" class="anchor"> Product specific properties </a>
+GitHub Codespaces works with a growing number of tools and, where applicable, their `devcontainer.json` properties. For example, connecting the Codespaces web editor or VS Code enables the use of [VS Code properties](#visual-studio-code-specific-properties).
 
-Some properties may apply differently to Codespaces. Please note that Codespaces, both through the Codespaces web editor and VS Code client, and supports [VS Code properties](#visual-studio-code-remote---containers).
+### <a href="#codespaces-specific-limitations" name="codespaces-specific-limitations" class="anchor"> Product specific limitations </a>
 
 | Property or variable | Type  | Description |
 |:------------------|:------------|:------------|
@@ -41,7 +42,7 @@ The [**Visual Studio Code Remote - Containers** extension](https://marketplace.v
 
 > **Tip:** If you make a change to your dev container after having built and connected to it, be sure to run **Remote-Containers: Rebuild Container** from the Command Palette (`kbstyle(F1)`) to pick up any changes you make.
 
-#### <a href="#visual-studio-code-specific-properties" name="visual-studio-code-specific-properties" class="anchor"> VS Code specific properties </a>
+### <a href="#visual-studio-code-specific-properties" name="visual-studio-code-specific-properties" class="anchor"> Product specific properties </a>
 
 Some properties are specific to VS Code. Please note that Codespaces supports these VS Code properties.
 
@@ -51,7 +52,7 @@ Some properties are specific to VS Code. Please note that Codespaces supports th
 | `settings` | object | Adds default `settings.json` values into a container/machine specific settings file. Defaults to `{}`. |
 {: .table .table-bordered .table-responsive}
 
-#### <a href="#visual-studio-code-specific-limitations" name="visual-studio-code-specific-limitations" class="anchor"> VS Code specific limitations </a>
+### <a href="#visual-studio-code-specific-limitations" name="visual-studio-code-specific-limitations" class="anchor"> Product specific limitations </a>
 
 Some properties may also have certain limitations in the Remote - Containers extension.
 
@@ -63,7 +64,7 @@ Some properties may also have certain limitations in the Remote - Containers ext
 | `${localWorkspaceFolderBasename}` | Any | Not yet supported when using Clone Repository in Container Volume. |
 {: .table .table-bordered .table-responsive}
 
-## <a href="#remote-containers-cli" name="remote-containers-cli" class="anchor"> Remote - Containers CLI limitations </a>
+## <a href="#remote-containers-cli" name="remote-containers-cli" class="anchor"> Remote - Containers CLI </a>
 
 There is a Remote - Containers [`devcontainer` CLI](https://code.visualstudio.com/docs/remote/devcontainer-cli) which may be installed within Remote - Containers or through the command line.
 
