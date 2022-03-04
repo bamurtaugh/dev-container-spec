@@ -60,7 +60,7 @@ The focus of `devcontainer.json` is to describe how to enrich a container for th
 
 ## <a href="#tool-specific" name="tool-specific" class="anchor"> Tool-specific properties </a>
 
-While most properties apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools. You may explore this in the [supporting tools and services document](/supporting.md).
+While most properties apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools. You may explore this in the [supporting tools and services document](../supporting.md).
 
 ## <a href="#lifecycle-scripts" name="lifecycle-scripts" class="anchor"> Lifecycle scripts </a>
 
