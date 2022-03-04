@@ -6,13 +6,13 @@ sectionid: supporting
 
 This page outlines tools and services that currently support the development container specification, including the `devcontainer.json` format.
 
-While most [dev container properties](json-reference.md) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools, which are outlined below.
+While most [dev container properties](implementors/json_reference) apply to any `devcontainer.json` supporting tool or service, a few are specific to certain tools, which are outlined below.
 
 ## <a href="#devcontainer-cli" name="devcontainer-cli" class="anchor"> devcontainer CLI </a>
 
 There will be a dev container command line interface (CLI) that can take a `devcontainer.json` and create and configure a dev container from it.
 
-The publishing of this CLI is being discussed in a [dev-container-spec issue](https://github.com/microsoft/dev-container-spec/issues/9) and will be available on the [reference page](/_implementors/reference.md) of this site.
+The publishing of this CLI is being discussed in a [dev-container-spec issue](https://github.com/microsoft/dev-container-spec/issues/9) and will be available on the [reference page](implementors/reference) of this site.
 
 ## <a href="#github-codespaces" name="github-codespaces" class="anchor"> GitHub Codespaces </a>
 
@@ -70,4 +70,4 @@ There is a Remote - Containers [`devcontainer` CLI](https://code.visualstudio.co
 
 ## <a href="#schema" name="schema" class="anchor"> Schema </a>
 
-You can explore the [VS Code implementation](/_implementors/json_schema.md) of the dev container schema.
+You can explore the [VS Code implementation](implementors/json_schema) of the dev container schema.
