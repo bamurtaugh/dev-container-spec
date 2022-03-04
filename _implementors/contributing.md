@@ -11,13 +11,13 @@ We're excited for your contributions to the Dev Container Specification! This do
 ## <a href="#contribution-approaches" name="contribution-approaches" class="anchor"> Contribution approaches </a>
 
 - Propose the change via an [issue](https://github.com/microsoft/dev-container-spec/issues) in the [dev-container-spec repo](https://github.com/microsoft/dev-container-spec). Try to get early feedback before spending too much effort formalizing it.
-- More formally document the proposed change in terms of properties and their semantics. Look to format your proposal like our [devcontainer.json reference](/_implementors/json_reference).
+- More formally document the proposed change in terms of properties and their semantics. Look to format your proposal like our [devcontainer.json reference](/dev-container-spec/_implementors/json_reference).
 
 Here is a sample proposal:
 
 | Property | Type  | Description |
 |:------------------|:------------|:------------|
-| `image`    | string      | **Required** when [using an image](/docs/remote/create-dev-container.md#using-an-image-or-dockerfile). The name of an image in a container registry ([DockerHub](https://hub.docker.com), [GitHub Container Registry](https://docs.github.com/packages/guides/about-github-container-registry), [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)) that VS Code and other `devcontainer.json` supporting services / tools should use to create the dev container. |
+| `image`    | string      | **Required** when using an image. The name of an image in a container registry ([DockerHub](https://hub.docker.com), [GitHub Container Registry](https://docs.github.com/packages/guides/about-github-container-registry), [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)) that VS Code and other `devcontainer.json` supporting services / tools should use to create the dev container. |
 {: .table .table-bordered .table-responsive}
 
 - PRs to the [schema](https://github.com/microsoft/vscode/blob/main/extensions/configuration-editing/schemas/devContainer.schema.src.json), i.e code or shell scripts demonstrating approaches for implementation.
