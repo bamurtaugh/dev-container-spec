@@ -10,7 +10,7 @@ While most [dev container properties](implementors/json_reference) apply to any 
 
 ## <a href="#devcontainer-cli" name="devcontainer-cli" class="anchor"> devcontainer CLI </a>
 
-There will be a dev container command line interface (CLI) that can take a `devcontainer.json` and create and configure a dev container from it. The CLI allows for prebuilding dev container definitions using a CI or DevOps product like GitHub Actions. It can detect and include dev container features and apply them at container runtime, and run [lifecycle commands](implementors/json_reference/lifecycle-scripts) like `postCreateCommand`, providing more power than a plain `docker build` and `docker run`.
+There will be a dev container command line interface (CLI) that can take a `devcontainer.json` and create and configure a dev container from it. The CLI allows for prebuilding dev container definitions using a CI or DevOps product like GitHub Actions. It can detect and include dev container features and apply them at container runtime, and run [lifecycle commands](implementors/json_reference/#lifecycle-scripts) like `postCreateCommand`, providing more power than a plain `docker build` and `docker run`.
 
 The publishing of this CLI is being discussed in a [dev-container-spec issue](https://github.com/microsoft/dev-container-spec/issues/9) and will be available on the [reference page](implementors/reference) of this site.
 
