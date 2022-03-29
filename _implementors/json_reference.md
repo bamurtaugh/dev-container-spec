@@ -6,7 +6,7 @@ author: Microsoft
 index: 3
 ---
 
-A `devcontainer.json` file in your project tells [tools and services that support the dev container spec](../../supporting) how to access (or create) a **development container** with a well-defined tool and runtime stack.
+A `devcontainer.json` file in your project tells [tools and services that support the dev container spec](../../supporting) how to access (or create) a **development container** with a well-defined tool and runtime stack. It follows the JSON with Comments (jsonc) format.
 
 ## <a href="#scenario-specific" name="scenario-specific" class="anchor"> Scenario specific properties </a>
 

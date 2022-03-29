@@ -11,7 +11,7 @@ Each scenario’s needs can vary between simple single container environments to
 
 ### <a href="#metadata-format" name="metadata-format" class="anchor">  A structured metadata format </a>
 
-Like the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) before it, the first format in the specification, [`devcontainer.json`](implementors/json_reference), was born out of necessity. It is a structured metadata format that tools can use to store any needed configuration required to develop inside of local or cloud-based containerized coding. While this metadata can be persisted in a `devcontainer.json` today, we envision that this same structured data can be embedded in images and other formats -- all while retaining a common object model for consistent processing.
+Like the [Language Server Protocol](https://microsoft.github.io/language-server-protocol/) before it, the first format in the specification, [`devcontainer.json`](implementors/json_reference), was born out of necessity. It is a structured JSON with Comments (jsonc) metadata format that tools can use to store any needed configuration required to develop inside of local or cloud-based containerized coding. While this metadata can be persisted in a `devcontainer.json` today, we envision that this same structured data can be embedded in images and other formats -- all while retaining a common object model for consistent processing.
 
 ### <a href="#Development-vs-production" name="Development-vs-production" class="anchor"> Development vs production </a>
 
